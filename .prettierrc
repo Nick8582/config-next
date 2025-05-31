@@ -1,0 +1,32 @@
+{
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "semi": false,
+  "arrowParens": "avoid",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindStylesheet": "./src/app/globals.css",
+  "tailwindFunctions": ["clsx", "tv"],
+  "tailwindAttributes": ["myClassList"],
+  "importOrder": [
+    "^react$",
+    "^clsx$",
+    "react-",
+    "next/",
+    "",
+    "^[^@./]+$",
+    "^@[a-zA-Z-]+",
+    "@/public/",
+    "",
+    "@/src/",
+    "@/",
+    "^(?!.*[.]scss$)(?!.*[.]lang$)(?!.*[.][\\/]breadcrumbs$)[.\\/]*.*$",
+    "",
+    ".lang$",
+    ".scss$"
+  ],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "importOrderTypeScriptVersion": "5.0.0"
+}
