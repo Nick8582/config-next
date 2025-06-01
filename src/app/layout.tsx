@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 
 import "./globals.css"
 
+import { Providers } from "@/src/app/providers"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
